@@ -1,4 +1,70 @@
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 
 @include main;
+
+main,
+footer {
+	padding: 2em 15em;
+}
+
+.logo {
+	font-size: 2em;
+
+	span {
+		color: $main-red;
+		font-family: $logo_font;
+	}
+}
+
+main {
+	height: 100vh;
+	background-image: url(../slike/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	header {
+		background-color: #ffffff;
+		padding: 1em;
+		@include clearfix;
+
+		.logo {
+			font-weight: bold;
+			float: left;
+		}
+
+		nav {
+			float: right;
+			ul {
+				list-style: none;
+			}
+			li {
+				display: inline-block;
+				margin-left: 2em;
+				line-height: 2.5em;
+			}
+
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+					color: #000000;
+				}
+			}
+		}
+	}
+
+	h1,
+	h3 {
+		color: #ffffff;
+		text-align: center;
+		font-weight: normal;
+	}
+
+	h1 {
+		font-size: 3em;
+		border-bottom: 1px solid $main-red;
+		margin: 25% auto 0;
+		width: 60%;
+	}
+}
