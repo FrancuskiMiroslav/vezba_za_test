@@ -3,6 +3,10 @@
 
 @include main;
 
+html {
+	scroll-behavior: smooth;
+}
+
 main,
 footer {
 	padding: 2em 15em;
@@ -66,5 +70,44 @@ main {
 		border-bottom: 1px solid $main-red;
 		margin: 25% auto 0;
 		width: 60%;
+	}
+}
+
+section {
+	padding: 5em 10em;
+	@include clearfix;
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 3em;
+	}
+}
+
+.btn {
+	display: inline-block;
+	padding: 1em 4em;
+	background-color: $main-red;
+	color: #ffffff;
+	margin: 1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover {
+		color: $red_dark;
+		background-color: lighten($color: $red_dark, $amount: 2);
+	}
+}
+
+#catalog {
+	background-color: $grey_background;
+
+	.box {
+		float: left;
+		width: 25%;
+		text-align: center;
+
+		img {
+			width: 90%;
+		}
 	}
 }
