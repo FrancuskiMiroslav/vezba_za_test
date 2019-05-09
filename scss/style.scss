@@ -151,3 +151,24 @@ section {
 		}
 	}
 }
+
+footer {
+	background: #000000;
+	@include clearfix;
+
+	.logo {
+		clear: both;
+		border-bottom: 1px solid $main-red;
+	}
+
+	address,
+	.map {
+		margin: 1em;
+	}
+	address {
+		float: left;
+	}
+	.map {
+		float: right;
+	}
+}
