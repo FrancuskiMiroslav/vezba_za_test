@@ -93,8 +93,8 @@ section {
 	text-transform: uppercase;
 	text-decoration: none;
 	&:hover {
-		color: $red_dark;
-		background-color: lighten($color: $red_dark, $amount: 2);
+		color: darken($color: $red_dark, $amount: 15%);
+		background-color: lighten($color: $red_dark, $amount: 15%);
 	}
 }
 
@@ -108,6 +108,46 @@ section {
 
 		img {
 			width: 90%;
+		}
+	}
+}
+
+#pricing {
+	text-align: center;
+
+	.btn {
+		display: none;
+	}
+
+	table {
+		width: 60%;
+		margin: 0 auto;
+		border-collapse: collapse;
+
+		td,
+		th {
+			padding: 1em;
+		}
+
+		thead {
+			background-color: $main-red;
+			th {
+				color: #fff;
+				&:first-child {
+					background-color: darken($color: $red_dark, $amount: 15%);
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				border-bottom: 1px solid $main_text_color;
+			}
+
+			td:first-child {
+				background-color: $grey_background;
+				font-weight: bold;
+			}
 		}
 	}
 }
